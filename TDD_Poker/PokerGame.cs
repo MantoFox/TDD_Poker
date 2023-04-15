@@ -15,8 +15,13 @@ public class PokerGame
         {
             winnerName = players[1].Name;
             var winnerActualValue = players[1].Cards.Max(card => card.ActualValue);
-            var winnerCard = players[1].Cards.First(card => card.ActualValue == winnerActualValue);
-            winnerOutput = winnerCard.Output;
+            winnerOutput = players[1].Cards.First(card => card.ActualValue == winnerActualValue).Output;
+        }
+        else if (compareResult > 0)
+        {
+            winnerName = players[0].Name;
+            var winnerActualValue = players[0].Cards.Max(card => card.ActualValue);
+            winnerOutput = players[0].Cards.First(card => card.ActualValue == winnerActualValue).Output;
         }
 
         return $"{winnerName} wins. - with High card: {winnerOutput}";
