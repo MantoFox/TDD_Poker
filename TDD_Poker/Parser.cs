@@ -4,13 +4,11 @@ public class Parser
 {
     public List<Player> Parse(string input)
     {
-        var playerSection = input.Split("  ", StringSplitOptions.RemoveEmptyEntries)[0];
-        var player = GetPlayer(playerSection);
+        var playerSection = input.Split("  ", StringSplitOptions.RemoveEmptyEntries)
+            .Select(GetPlayer)
+            .ToList();
 
-        return new List<Player>
-        {
-            player
-        };
+        return playerSection;
     }
 
     private static Player GetPlayer(string playerSection)
