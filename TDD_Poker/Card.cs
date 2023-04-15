@@ -29,8 +29,7 @@ public class Card
                 { 14, "Ace" },
                 { 13, "K" },
                 { 12, "Q" },
-                { 11, "J" },
-                { 10, "T" },
+                { 11, "J" }
             };
             return outputConverter.ContainsKey(ActualValue) ? outputConverter.GetValueOrDefault(ActualValue) : ActualValue.ToString();
         }

@@ -19,6 +19,7 @@ namespace TDD_Poker
         [TestCase("Black: 2H 3D 5S 9C JD  White: 2C 3H 4S 8C QH", "White wins. - with High card: Q")]
         [TestCase("Black: 2H 3D 5S 9C TD  White: 2C 3H 4S 8C JH", "White wins. - with High card: J")]
         [TestCase("Black: 2H 3D 5S 8C 9D  White: 2C 3H 4S 8C TH", "White wins. - with High card: 10")]
+        [TestCase("Black: 2H 3D 5S 9C AD  White: 2C 3H 4S 8C AH", "Black wins. - with High card: 9")]
         public void A01_BothHighCard(string input, string expected)
         {
             AssertShowResultShouldBe(input, expected);
