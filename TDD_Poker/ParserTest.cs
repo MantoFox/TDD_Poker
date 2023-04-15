@@ -21,7 +21,7 @@ public class ParserTest
                     new Card{Output = "3", Suit = "D"},
                     new Card{Output = "5", Suit = "S"},
                     new Card{Output = "9", Suit = "C"},
-                    new Card{Output = "K", Suit = "D"},
+                    new Card{Output = "K", Suit = "D"}
                 }
             }
         };
