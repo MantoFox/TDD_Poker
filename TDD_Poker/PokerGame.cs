@@ -10,19 +10,20 @@ public class PokerGame
                             players[1].Cards.Max(card => card.ActualValue);
         var winnerName = "";
         var winnerOutput = "";
+        var winnerPlayer = new Player();
 
         if (compareResult < 0)
         {
-            winnerName = players[1].Name;
-            var winnerActualValue = players[1].Cards.Max(card => card.ActualValue);
-            winnerOutput = players[1].Cards.First(card => card.ActualValue == winnerActualValue).Output;
+            winnerPlayer = players[1];
         }
         else if (compareResult > 0)
         {
-            winnerName = players[0].Name;
-            var winnerActualValue = players[0].Cards.Max(card => card.ActualValue);
-            winnerOutput = players[0].Cards.First(card => card.ActualValue == winnerActualValue).Output;
+            winnerPlayer = players[0];
         }
+
+        winnerName = winnerPlayer.Name;
+        var winnerCard = winnerPlayer.Cards.OrderByDescending(card => card.ActualValue).First();
+        winnerOutput = winnerCard.Output;
 
         return $"{winnerName} wins. - with High card: {winnerOutput}";
     }
