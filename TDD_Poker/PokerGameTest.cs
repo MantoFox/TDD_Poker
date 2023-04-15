@@ -13,10 +13,15 @@ namespace TDD_Poker
         }
 
         [Test]
-        public void A01_BothHighCard()
+        [TestCase("Black: 2H 3D 5S 9C KD  White: 2C 3H 4S 8C AH", "White wins. - with High card: Ace")]
+        public void A01_BothHighCard(string input, string expected)
         {
-            var expected = "White wins. - with High card: Ace";
-            var actual = _pokerGame.ShowResult("Black: 2H 3D 5S 9C KD  White: 2C 3H 4S 8C AH");
+            AssertShowResultShouldBe(input, expected);
+        }
+
+        private void AssertShowResultShouldBe(string input, string expected)
+        {
+            var actual = _pokerGame.ShowResult(input);
             actual.Should().Be(expected);
         }
     }
