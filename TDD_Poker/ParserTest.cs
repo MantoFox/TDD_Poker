@@ -17,11 +17,11 @@ public class ParserTest
                 Name = "Black",
                 Cards = new List<Card>
                 {
-                    new Card{Output = "2", Suit = "H"},
-                    new Card{Output = "3", Suit = "D"},
-                    new Card{Output = "5", Suit = "S"},
-                    new Card{Output = "9", Suit = "C"},
-                    new Card{Output = "K", Suit = "D"}
+                    new Card{Input = "2", Suit = "H"},
+                    new Card{Input = "3", Suit = "D"},
+                    new Card{Input = "5", Suit = "S"},
+                    new Card{Input = "9", Suit = "C"},
+                    new Card{Input = "K", Suit = "D"}
                 }
             }
         };
@@ -41,11 +41,11 @@ public class ParserTest
                 Name = "Black",
                 Cards = new List<Card>
                 {
-                    new Card{Output = "2", Suit = "H"},
-                    new Card{Output = "3", Suit = "D"},
-                    new Card{Output = "5", Suit = "S"},
-                    new Card{Output = "9", Suit = "C"},
-                    new Card{Output = "K", Suit = "D"}
+                    new Card{Input = "2", Suit = "H"},
+                    new Card{Input = "3", Suit = "D"},
+                    new Card{Input = "5", Suit = "S"},
+                    new Card{Input = "9", Suit = "C"},
+                    new Card{Input = "K", Suit = "D"}
                 }
             },
             new Player
@@ -53,11 +53,11 @@ public class ParserTest
                 Name = "White",
                 Cards = new List<Card>
                 {
-                    new Card{Output = "2", Suit = "C"},
-                    new Card{Output = "3", Suit = "H"},
-                    new Card{Output = "4", Suit = "S"},
-                    new Card{Output = "8", Suit = "C"},
-                    new Card{Output = "A", Suit = "H"}
+                    new Card{Input = "2", Suit = "C"},
+                    new Card{Input = "3", Suit = "H"},
+                    new Card{Input = "4", Suit = "S"},
+                    new Card{Input = "8", Suit = "C"},
+                    new Card{Input = "A", Suit = "H"}
                 }
             }
         };

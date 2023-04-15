@@ -16,7 +16,7 @@ public class Parser
         var playerName = playerSection.Split(":", StringSplitOptions.RemoveEmptyEntries)[0];
         var cardSection = playerSection.Split(":", StringSplitOptions.RemoveEmptyEntries)[1];
         var cards = cardSection.Split(" ", StringSplitOptions.RemoveEmptyEntries)
-            .Select(card => new Card { Output = card.Substring(0, 1), Suit = card.Substring(1, 1) })
+            .Select(card => new Card { Input = card.Substring(0, 1), Suit = card.Substring(1, 1) })
             .ToList();
 
         return new Player
