@@ -17,6 +17,7 @@ public class PokerGame
         var exceptCard1 = new List<Card>();
         var exceptCard2 = new List<Card>();
 
+        // compare cards
         if (compareResult == 0)
         {
             exceptCard1.Add(remainCard1.OrderByDescending(card => card.ActualValue).First());
@@ -37,10 +38,14 @@ public class PokerGame
             winnerPlayer = players[0];
             winnerCard = remainCard1.OrderByDescending(card => card.ActualValue).First();
         }
+        // combine string
+        if (compareResult != 0)
+        {
+            winnerName = winnerPlayer.Name;
+            winnerOutput = winnerCard.Output;
 
-        winnerName = winnerPlayer.Name;
-        winnerOutput = winnerCard.Output;
-
-        return $"{winnerName} wins. - with High card: {winnerOutput}";
+            return $"{winnerName} wins. - with High card: {winnerOutput}";
+        }
+        return "Tie.";
     }
 }
